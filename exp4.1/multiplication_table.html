@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Table</title>
+</head>
+<body>
+<script type="text/javascript">
+function generateTable() {
+    let n = parseInt(prompt("Enter a positive integer for n:", ""), 10);
+    while (isNaN(n) || n <= 0) {
+        alert("Please enter a positive integer.");
+        n = parseInt(prompt("Enter a positive integer for n:", ""), 10);
+    }
+    let table = "";
+    for (let i = 1; i <= 10; i++) {
+        let number = n * i;
+        table += `${n} * ${i} = ${number}
+`;
+    }
+    alert(table);
+}
+generateTable();
+</script>
+</body>
+</html>

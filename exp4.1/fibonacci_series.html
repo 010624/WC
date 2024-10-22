@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fibonacci Series</title>
+</head>
+<body>
+<script type="text/javascript">
+function generateFibonacciSeries(n) {
+    if (isNaN(n) || n <= 0) {
+        alert("Please enter a positive integer.");
+        return;
+    }
+    let fibSeries = [];
+    let a = 0, b = 1;
+    for (let i = 0; i < n; i++) {
+        fibSeries.push(a);
+        let next = a + b;
+        a = b;
+        b = next;
+    }
+    return fibSeries;
+}
+function displayFibonacciSeries() {
+    let numTerms = parseInt(prompt("Enter the number of terms for Fibonacci series:", ""), 10);
+    let series = generateFibonacciSeries(numTerms);
+    if (series && series.length > 0) {
+        alert("Fibonacci Series: " + series.join(", "));
+    }
+}
+displayFibonacciSeries();
+</script>
+</body>
+</html>

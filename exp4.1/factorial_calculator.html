@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Factorial Calculator</title>
+    <script type="text/javascript">
+        function factorialCalc() {
+            let number = parseInt(prompt("Enter a number to calculate its factorial", "0"), 10);
+            if (isNaN(number) || number <= 0) {
+                alert("Please enter a whole number greater than zero.");
+                return;
+            }
+            let factorial = 1;
+            for (let i = 1; i <= number; i++) {
+                factorial *= i;
+            }
+            alert("The factorial of " + number + " is " + factorial);
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Calculate Factorial" onclick="factorialCalc();">
+</body>
+</html>

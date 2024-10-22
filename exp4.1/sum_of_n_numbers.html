@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Sum of N Numbers</title>
+<script language="javascript">
+function addsum() {
+    alert("You're going to give me a list of numbers. I'm going to add them together for you.");
+    var keepgoing = true;
+    var sumofnums = 0;
+    while (keepgoing) {
+        sumofnums += parseInt(prompt("What's the next number to add?", "0"), 10);
+        keepgoing = confirm("Add another number?");
+    }
+    alert("The sum of all your numbers is " + sumofnums);
+}
+</script>
+</head>
+<body>
+    <input type="button" value="Sum of N Numbers" onclick="addsum();">
+</body>
+</html>
