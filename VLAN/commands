@@ -1,0 +1,40 @@
+to send messages(packets)
+  ping "ip address of receiver pc"
+
+eg: ping 10.0.0.2
+
+
+
+  FOR REFRENCE ONLY
+
+switch commands:
+
+  click : CLI
+
+now enter following commands in IOS Command Line interface :- 
+
+enable 
+conf -t
+vlan 2
+name office
+exit 
+vlan 3
+name home
+exit 
+interface fastEthernet 0/1
+switch access vlan 2
+  exit
+  interface fastEthernet 0/2
+switch access vlan 2
+  exit
+  interface fastEthernet 0/3
+switch access vlan 3
+  exit
+  interface fastEthernet 0/4
+switch access vlan 4
+  exit
+
+  
+  
+
+
