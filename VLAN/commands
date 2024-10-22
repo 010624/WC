@@ -23,16 +23,16 @@ name home
 exit 
 interface fastEthernet 0/1
 switch access vlan 2
-  exit
-  interface fastEthernet 0/2
+exit
+interface fastEthernet 0/2
 switch access vlan 2
-  exit
-  interface fastEthernet 0/3
+exit
+interface fastEthernet 0/3
 switch access vlan 3
-  exit
-  interface fastEthernet 0/4
+exit
+interface fastEthernet 0/4
 switch access vlan 4
-  exit
+exit
 
   
   
