@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Pop-up Functions</title>
+</head>
+<body>
+
+<h3>Display Date</h3>
+<input type="text" id="date" placeholder="Date will appear here">
+<button onclick="dDate()">Display Date</button>
+
+<h3>Factorial</h3>
+<button onclick="calculateFactorial()">Factorial</button>
+
+<h3>Multiplication Table</h3>
+<button onclick="showMultiplicationTable()">Multiplication Table</button>
+
+<h3>Sum of Numbers</h3>
+<button onclick="calculateSum()">Sum of Numbers</button>
+
+<script>
+    // Task A: Display Date
+    function dDate() {
+        const date = new Date();
+        document.getElementById('date').value = date;
+    }
+
+    // Task B: Factorial Calculation
+    function calculateFactorial() {
+        const num = prompt("Enter a number to find its factorial:");
+        let factorial = 1;
+        for (let i = 1; i <= num; i++) {
+            factorial *= i;
+        }
+        alert("The factorial of " + num + " is " + factorial);
+    }
+
+    // Task C: Multiplication Table
+    function showMultiplicationTable() {
+        const num = prompt("Enter a number to get its multiplication table:");
+        let table = "";
+        for (let i = 1; i <= 10; i++) {
+            table += num + " x " + i + " = " + (num * i) + "\n";
+        }
+        alert("Multiplication Table of " + num + ":\n" + table);
+    }
+
+    // Task D: Sum of Numbers
+    function calculateSum() {
+        let total = 0;
+        let addMore = true;
+        while (addMore) {
+            let num = parseInt(prompt("Enter a number:"));
+            total += num;
+            addMore = confirm("Do you want to add another number?");
+        }
+        alert("The total sum is " + total);
+    }
+</script>
+
+</body>
+</html>
