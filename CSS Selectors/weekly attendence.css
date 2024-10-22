@@ -1,0 +1,25 @@
+/* Styling for table, table header, and table data */
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    padding: 14px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+#w {
+    background-color: black;
+    color: white;
+}
+
+tr td, tr th {
+    height: 30px;
+}
+
