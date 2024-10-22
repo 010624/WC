@@ -1,1 +1,29 @@
 
+router 0 --
+exit
+ip nat inside source static 10.10.10.2 50.50.50.2
+ip nat inside source static 10.10.10.3 50.50.50.3
+interface fastEthernet 0/0
+ip nat inside
+exit 
+interface fastEthernet 1/0
+exit
+ip nat inside 
+interface serial 2/0
+ip nat outside 
+exit
+
+ip route 60.0.0.0 255.0.0.0 192.168.10.2
+
+route1
+
+exit
+ip nat inside source static 20.20.20.2 60.60.60.2
+interface fastEthernet 0/0
+ip nat inside
+exit 
+interface serial 2/0
+ip nat outside 
+exit
+
+ip route 50.0.0.0 255.0.0.0 192.168.1
